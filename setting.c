@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 16:44:22 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 17:12:52 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/02 21:05:22 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,19 @@ void	print_error(int error)
 	else if (error == 4)
 		write(2, "Found wrong line length Exiting.\n", 33);
 	exit(1);
+}
+
+int	check_filename(char *filename)
+{
+	int	i;
+
+	i = 0;
+	while (filename[i])
+		i++;
+	if (filename[i - 1] != 'f')
+	{
+		print_error(1);
+		exit(1);
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 15:58:54 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 17:23:11 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/02 20:45:29 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	fdf_init(t_fdf *fdf, char *filename, int *check_fd)
 	fd = open(filename, O_RDONLY);
 	if (fd < 0)
 		print_error(1);
+	check_filename(filename);
 	fdf->stack = read_map(fd, &fdf->height, &fdf->width, check_fd);
 	if (*check_fd == -1)
 		print_error(3);

@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 11:21:35 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 17:28:33 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/02 20:04:25 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,11 @@ t_point	*projection(t_point *p, t_fdf *fdf)
 {
 	p->x *= fdf->zoom;
 	p->y *= fdf->zoom;
-	// fdf->alpha = 0;
-    // fdf->beta = 0;
-    // fdf->teta = 0;
+	x_rotation(&p->x, &p->y, &p->z, fdf->alpha);
+	y_rotation(&p->x, &p->y, &p->z, fdf->beta);
+	z_rotation(&p->x, &p->y, &p->z, fdf->teta);
 	if (fdf->project == 1)
 		iso(&p->x, &p->y, p->z, fdf->def_ang);
-	if (fdf->rot == 1)
-		x_rotation(&p->x, &p->y, &p->z, fdf->alpha);
-	else if (fdf->rot == 2)
-		y_rotation(&p->x, &p->y, &p->z, fdf->beta);
-	else if (fdf->rot == 3)
-		z_rotation(&p->x, &p->y, &p->z, fdf->teta);
 	p->x += fdf->x_pos;
 	p->y += fdf->y_pos;
 	return (p);

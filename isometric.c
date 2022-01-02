@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 20:40:27 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 17:14:49 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/02 21:08:03 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	x_rotation(int *x, int *y, int *z, double teta)
 {
 	(void)(x);
 	*y = *y * cos(teta) + *z * sin(teta);
-	*z = -(*y)*sin(teta) + *z * (cos(teta));
+	*z = -(*y) * sin(teta) + *z * (cos(teta));
 }
 
 void	y_rotation(int *x, int *y, int *z, double teta)

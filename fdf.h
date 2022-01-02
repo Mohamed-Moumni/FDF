@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 12:09:31 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 16:35:55 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/02 20:49:38 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # define WIDTH 1000
 # define HEIGHT 768
 # define DEFAULT_ANG 0.523599
+
 typedef struct s_z
 {
 	int	altitude;
@@ -36,7 +37,7 @@ typedef struct s_stack
 
 typedef struct s_matrix
 {
-	t_z z;
+	t_z	z;
 }	t_matrix;
 
 typedef struct s_fdf
@@ -85,7 +86,7 @@ typedef struct s_point
 int			ft_atoi_hex(char *str);
 void		bresnham(t_fdf *data, t_point *a, t_point *b);
 void		ft_draw(t_fdf *fdf);
-void		iso(int *x, int *y, int z, double);
+void		iso(int *x, int *y, int z, double beta);
 t_stack		*read_map(int fd, int *height, int *width, int *check_fd);
 t_point		*point_init(int x, int y, t_fdf *fdf);
 t_point		*projection(t_point *p, t_fdf *fdf);
@@ -95,8 +96,6 @@ char		**ft_split(char *s, char c);
 int			ft_atoi(const char *str);
 void		stack_add_front(t_stack **stack, t_stack *new);
 int			key_handel(int key, t_fdf *param);
-int			translate_map(int key, t_fdf *param);
-int			key_zoom(int key, t_fdf *param);
 void		print_error(int error);
 int			fill_stack(char **sec_split, t_stack **stack);
 void		x_rotation(int *x, int *y, int *z, double teta);
@@ -104,8 +103,9 @@ void		y_rotation(int *x, int *y, int *z, double teta);
 void		z_rotation(int *x, int *y, int *z, double teta);
 int			event_key(int key, t_fdf *param);
 void		screen_info(t_fdf *fdf);
-int			rot(int key, t_fdf *param);
 int			esc_close(int key, t_fdf *param);
 int			close_win(void *param);
+void		print_info(t_fdf *fdf);
+int			check_filename(char *filename);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/27 11:12:05 by mmoumni           #+#    #+#              #
-#    Updated: 2022/01/02 17:24:44 by mmoumni          ###   ########.fr        #
+#    Updated: 2022/01/02 19:29:25 by mmoumni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC = bresnham.c get_next_line_utils.c setting.c create_matrix.c ft_atoi.c isome
 	data_init.c ft_atoi_hex.c draw_map.c ft_split.c key_handle.c fdf.c get_next_line.c read_map.c
 OBJ = $(SRC:.c=.o)
 SRC_BONUS = bresnham.c fdf_bonus.c get_next_line_utils.c setting.c create_matrix.c ft_atoi.c isometric.c stack.c \
-	data_init.c ft_atoi_hex.c key_handel_bonus.c draw_map.c ft_split.c key_handle.c get_next_line.c read_map.c
+	data_init.c ft_atoi_hex.c key_handel_bonus.c draw_map.c ft_split.c get_next_line.c read_map.c
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 
