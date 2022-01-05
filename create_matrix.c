@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 22:37:54 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 17:10:41 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/05 21:33:29 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,16 @@ t_matrix	**create_matrix(t_fdf *fdf, t_stack *stack)
 
 	height = fdf->height;
 	width = fdf->width;
-	matrix = (t_matrix **)malloc(sizeof(t_matrix *) * height);
+	matrix = (t_matrix **)malloc(sizeof(t_matrix *) * (height + 1));
 	if (!matrix)
 		return (NULL);
-	while (height--)
+	while (height-- > 0)
 	{
 		matrix[height] = (t_matrix *)malloc(sizeof(t_matrix) * (width));
 		if (!matrix[height])
 			return (NULL);
 		fill_data(matrix[height], &stack, fdf);
 	}
+	matrix[height] = NULL;
 	return (matrix);
 }

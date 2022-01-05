@@ -6,17 +6,19 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 15:13:07 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 21:04:53 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/04 08:24:34 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include "keys_bonus.h"
 
-int	close_win(void *param)
+int	close_win(t_fdf *param)
 {
-	(void)param;
-	exit(1);
+	mlx_destroy_image(param->mlx_ptr, param->img_ptr);
+	mlx_destroy_window(param->mlx_ptr, param->win_ptr);
+	free(param->mlx_ptr);
+	exit(0);
 }
 
 int	key_zoom(int key, t_fdf *param)
@@ -40,10 +42,10 @@ int	key_zoom(int key, t_fdf *param)
 	}
 	else if (key == ESC)
 	{
-		(void)param;
 		mlx_destroy_image(param->mlx_ptr, param->img_ptr);
 		mlx_destroy_window(param->mlx_ptr, param->win_ptr);
-		exit(1);
+		free(param->mlx_ptr);
+		exit(0);
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 12:09:31 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 20:49:38 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/05 22:03:01 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void		z_rotation(int *x, int *y, int *z, double teta);
 int			event_key(int key, t_fdf *param);
 void		screen_info(t_fdf *fdf);
 int			esc_close(int key, t_fdf *param);
-int			close_win(void *param);
+int			close_win(t_fdf *param);
 void		print_info(t_fdf *fdf);
 int			check_filename(char *filename);
 

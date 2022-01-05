@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 17:10:31 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 21:07:42 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/05 09:30:57 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int	main(int ac, char **av)
 		mlx_put_image_to_window(fdf->mlx_ptr, fdf->win_ptr, fdf->img_ptr, 0, 0);
 		print_info(fdf);
 		mlx_hook(fdf->win_ptr, 17, 0L, close_win, fdf);
-		mlx_hook(fdf->win_ptr, 2, 1L << 0, event_key, fdf);
+		mlx_hook(fdf->win_ptr, 2, 0L, event_key, fdf);
 		mlx_loop(fdf->mlx_ptr);
 	}
 	else

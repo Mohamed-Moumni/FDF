@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 12:37:49 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 17:10:44 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/05 21:50:23 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,7 @@ void	bresnham(t_fdf *fdf, t_point *a, t_point *b)
 			a->y += param->sy;
 		}
 	}
+	free(a);
+	free(b);
+	free(param);
 }

@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 15:58:54 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/02 20:45:29 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/05 22:06:20 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void	fdf_init(t_fdf *fdf, char *filename, int *check_fd)
 	else if (*check_fd == -2)
 		print_error(4);
 	stack = fdf->stack;
-	fdf->matrix = create_matrix(fdf, fdf->stack);
-	free_stack(stack, fdf);
+	fdf->matrix = create_matrix(fdf, stack);
+	free_stack(fdf->stack, fdf);
 	fdf->stack = NULL;
 	init_camera(fdf);
 	fdf->mlx_ptr = mlx_init();

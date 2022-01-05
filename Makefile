@@ -6,18 +6,9 @@
 #    By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/27 11:12:05 by mmoumni           #+#    #+#              #
-#    Updated: 2022/01/02 19:29:25 by mmoumni          ###   ########.fr        #
+#    Updated: 2022/01/03 08:11:09 by mmoumni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# SRC_DIR = src
-# OBJ_DIR = obj
-# BIN_DIR = .
-
-# SRC = $(wildcard $(SRC_DIR)/*.c)
-# SRC_BONUS = $(wildcard $(SRC_DIR)/*_bonus.c)
-# OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
-# OBJ_BONUS = $(SRC_BONUS:$(SRC_DIR)/%_bonus.c=$(OBJ_DIR)/%_bonus.o)
 
 SRC = bresnham.c get_next_line_utils.c setting.c create_matrix.c ft_atoi.c isometric.c stack.c \
 	data_init.c ft_atoi_hex.c draw_map.c ft_split.c key_handle.c fdf.c get_next_line.c read_map.c
