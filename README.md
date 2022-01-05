@@ -21,10 +21,10 @@ git clone https://github.com/Mohamed-Moumni/FDF.git
 ```
 ```
 make 
-./fdf map.fdf
+./fdf ./test_maps/map.fdf
 ```
 For Bonus Use This Rule
 ```
 make bonus
-./fdf map.fdf
+./fdf ./test_maps/map.fdf
 ```
