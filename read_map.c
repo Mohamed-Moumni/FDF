@@ -6,7 +6,7 @@
 /*   By: mmoumni <mmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 12:40:11 by mmoumni           #+#    #+#             */
-/*   Updated: 2022/01/05 22:42:19 by mmoumni          ###   ########.fr       */
+/*   Updated: 2022/01/05 22:49:59 by mmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,10 @@ int	get_line_info(char *line, t_stack **stack, int *width, int *check_fd)
 {
 	int		i;
 	char	**split;
-	char	**sec_split;
-	int		j;	
+	char	**sec_split;	
 
 	split = ft_split(line, ' ');
 	i = 0;
-	j = 0;
 	while (split[i] != NULL)
 	{
 		sec_split = ft_split(split[i], ',');
@@ -57,7 +55,6 @@ int	get_line_info(char *line, t_stack **stack, int *width, int *check_fd)
 			return (1);
 		}
 		free_tab(sec_split);
-		j++;
 		i++;
 	}
 	if (check_line_error(*width, i, check_fd, split))
