@@ -8,6 +8,7 @@ FDF is a 42 Project to learn about 3d programming. The program takes a map as pa
 
 ## Mathematics And MiniLibX Sources 
 Also many thanks to these very informative sites:
+* http://members.chello.at/~easyfilter/Bresenham.pdf
 * https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/geometry/spherical-coordinates-and-trigonometric-functions
 * https://web.archive.org/web/20150225192611/http://www.arcsynthesis.org/gltut/index.html
 * http://inside.mines.edu/fs_home/gmurray/ArbitraryAxisRotation/
