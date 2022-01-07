@@ -1,4 +1,8 @@
 # FDF
+
+![42.fdf map](/Images/42.png)
+![42.fdf map](/Images/julia.png)
+![42.fdf map](/Images/Pyramide.png)
 ## Project Overview
 FDF is a 42 Project to learn about 3d programming. The program takes a map as parameter and creates its 3d representation.
 * Render a 3D map from a 2D representation. Initially I was using vectors and simple formulas as illustrated by formula.c file. Later I switched to matrixes.
